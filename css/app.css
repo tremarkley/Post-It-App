@@ -1,7 +1,16 @@
 ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 1em 3em;
   overflow: hidden;
   background-color: #333;
 }
+
+li {
+  float: right;
+}
+
+.addNoteBtn {
+  height: 4em;
+  width: 12em;
+} 

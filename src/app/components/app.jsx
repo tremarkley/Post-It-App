@@ -1,4 +1,5 @@
 import React from 'react';
+import resetStyle from '../../../css/reset.css';
 import style from '../../../css/app.css';
 
 class App extends React.Component {
@@ -14,7 +15,7 @@ class App extends React.Component {
       <div>
         <ul>
           <li>
-            <button>Add Note</button>
+            <button className="addNoteBtn">Add Note</button>
           </li>
         </ul>
       </div>
