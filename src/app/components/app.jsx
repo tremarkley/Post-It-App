@@ -18,6 +18,9 @@ class App extends React.Component {
             <button className="addNoteBtn"><div className="plusIcon"><span>+</span></div>Add Note</button>
           </li>
         </ul>
+        <div className="content">
+
+        </div>
       </div>
     );
   }

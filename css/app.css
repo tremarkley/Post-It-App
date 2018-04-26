@@ -24,3 +24,8 @@ li {
   float: left;
   margin-left: 1em;
 }
+
+.content {
+  color: rgb(249, 249, 251);
+  height: 100vh;
+}
