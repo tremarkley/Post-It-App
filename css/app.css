@@ -1,4 +1,4 @@
-ul {
+.navBar {
   list-style-type: none;
   margin: 0;
   padding: 1em 3em;
@@ -6,7 +6,7 @@ ul {
   background-color: rgb(34, 41, 55);
 }
 
-li {
+.navItem {
   float: right;
 }
 
@@ -26,6 +26,18 @@ li {
 }
 
 .content {
-  color: rgb(249, 249, 251);
+  background-color: rgb(249, 249, 251);
   height: 100vh;
+}
+
+.flex-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  list-style: none;
 }
