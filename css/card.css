@@ -1,13 +1,11 @@
 .card {
   background: white;
-  width: 200px;
-  height: 150px;
+  width: 6.5em;
+  height: 5em;
   margin: .2em;
-  line-height: 150px;
-  color: white;
+  color: black;
   font-weight: bold;
   font-size: 3em;
-  text-align: center;
   box-shadow: 0 0.05em 0.1em grey;
   border-radius: .1em .1em .15em .15em;
   overflow: hidden;
@@ -15,5 +13,28 @@
 
 .color {
   background: red;
-  height: .1em;
+  height: .15em;
+}
+
+.cardContent {
+  height: 100%;
+}
+
+.cardHeader {
+  height: 25%;
+  border-bottom: .05em solid rgb(249, 249, 251);
+}
+
+.cardHeaderText {
+  height: 100%;
+  padding: .4em;
+}
+
+h1 {
+  font-size: .4em;
+  font-weight: lighter;
+}
+
+.cardBody {
+  height: 75%;
 }
