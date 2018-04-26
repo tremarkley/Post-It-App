@@ -1,4 +1,5 @@
 import React from 'react';
+import reset from '../../../css/reset.css';
 import style from '../../../css/card.css';
 
 const Card = () => (

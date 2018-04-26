@@ -1,6 +1,5 @@
 .card {
   background: white;
-  padding: 5px;
   width: 200px;
   height: 150px;
   margin: .2em;
@@ -9,4 +8,12 @@
   font-weight: bold;
   font-size: 3em;
   text-align: center;
+  box-shadow: 0 0.05em 0.1em grey;
+  border-radius: .1em .1em .15em .15em;
+  overflow: hidden;
+}
+
+.color {
+  background: red;
+  height: .1em;
 }
