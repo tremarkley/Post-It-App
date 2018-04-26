@@ -45,3 +45,7 @@ table {
 * {
   font-family: 'Roboto', sans-serif;
 }
+
+button {
+	border: none;
+}

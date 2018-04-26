@@ -3,7 +3,7 @@ ul {
   margin: 0;
   padding: 1em 3em;
   overflow: hidden;
-  background-color: #333;
+  background-color: rgb(34, 41, 55);
 }
 
 li {
@@ -11,6 +11,16 @@ li {
 }
 
 .addNoteBtn {
-  height: 4em;
-  width: 12em;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  background-color: rgb(84, 179, 187);
+  height: 3em;
+  width: 9em;
+  color: white;
+  border-radius: .2em;
 } 
+
+.plusIcon {
+  float: left;
+  margin-left: 1em;
+}

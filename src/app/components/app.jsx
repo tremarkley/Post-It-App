@@ -15,7 +15,7 @@ class App extends React.Component {
       <div>
         <ul>
           <li>
-            <button className="addNoteBtn">Add Note</button>
+            <button className="addNoteBtn"><div className="plusIcon"><span>+</span></div>Add Note</button>
           </li>
         </ul>
       </div>
