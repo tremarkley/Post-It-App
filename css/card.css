@@ -38,6 +38,10 @@ h1 {
 
 .cardBody {
   height: 75%;
+  overflow: auto;
+  font-size: .3em;
+  font-weight: lighter;
+  padding: 1.2em;
 }
 
 .iconsDiv {

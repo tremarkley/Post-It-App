@@ -17,7 +17,9 @@ const Card = () => (
           </div>
         </div>
       </div>
-      <div className="cardBody"></div>
+      <div className="cardBody">
+        <p>This is where you write your thoughts and anything else you want to share.</p>
+      </div>
     </div>
   </li>
 )
