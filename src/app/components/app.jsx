@@ -29,6 +29,8 @@ class App extends React.Component {
     this.setState({
       showAddNote: true,
     });
+    //  prevent scrolling
+    document.body.style.overflow = 'hidden';
   }
 
   showEditNote(index) {
@@ -36,6 +38,8 @@ class App extends React.Component {
       editNote: true,
       cardToEdit: index,
     });
+    //  prevent scrolling
+    document.body.style.overflow = 'hidden';
   }
 
   showDelete(index) {
@@ -43,12 +47,16 @@ class App extends React.Component {
       showDelete: true,
       cardToEdit: index,
     });
+    //  prevent scrolling
+    document.body.style.overflow = 'hidden';
   }
 
   closeDelete() {
     this.setState({
       showDelete: false,
     });
+    // re-enable scrolling
+    document.body.style.overflow = 'auto';
   }
 
   closeAddNote() {
@@ -56,6 +64,8 @@ class App extends React.Component {
       showAddNote: false,
       editNote: false,
     });
+    // re-enable scrolling
+    document.body.style.overflow = 'auto';
   }
 
   addNote({color, title, body}) {
