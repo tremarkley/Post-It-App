@@ -9,6 +9,8 @@ class AddNote extends React.Component {
       color: 'red',
       body: undefined,
       title: undefined,
+      addButtonActive: false,
+      changesHaveBeenMade: false,
     }
     this.clickAddNote = this.clickAddNote.bind(this);
     this.titleChange = this.titleChange.bind(this);
@@ -17,28 +19,49 @@ class AddNote extends React.Component {
   }
 
   clickAddNote() {
-    debugger
-    this.props.addNote(this.state);
-    this.props.closeAddNote();
+    if (this.state.addButtonActive) {
+      this.props.addNote(this.state);
+      this.props.closeAddNote();
+    }
+  }
+
+  activateAddButton() {
+    if (this.state.body && 
+        this.state.title && 
+        this.state.body.length > 0 && 
+        this.state.title.length > 0) {
+      this.setState({
+        addButtonActive: true,
+      });
+    } else {
+      this.setState({
+        addButtonActive: false,
+      });
+    }
   }
 
   titleChange(event) {
-    this.setState({ title: event.target.value });
+    this.setState({ title: event.target.value }, () => {
+      this.activateAddButton();
+    });
   }
 
   colorChange(event) {
-    console.log(event);
+    const color = event.target.id;
+    this.setState({ color });
   }
 
   bodyChange(event) {
-    this.setState({ body: event.target.value });
+    this.setState({ body: event.target.value }, () => {
+      this.activateAddButton();
+    });
   }
 
   render() {
     return (
       <div className="popup">
           <div className="popupInner">
-            <div className="colorPopup"></div>
+            <div className={`colorPopup ${this.state.color}`}></div>
             <div className="popupContent">
               <div className="colorPickerDiv">
                 <ul className="colorPicker">  
@@ -57,7 +80,7 @@ class AddNote extends React.Component {
               <div className="flex-vertical">
                 <div className="buttonsDiv">
                   <button className="popupButton cancel" onClick={this.props.closeAddNote}>Cancel</button>
-                  <button className="popupButton add" onClick={this.clickAddNote}>Add</button>
+                  <button className={`popupButton add ${this.state.addButtonActive ? 'active' : null}`} onClick={this.clickAddNote}>Add</button>
                 </div>
               </div>
             </div>

@@ -134,5 +134,11 @@ textarea:focus {
 }
 
 .popupButton.add {
+  cursor: auto;
   background-color: rgb(176, 223, 227);
+}
+
+.popupButton.add.active {
+  cursor: pointer;
+  background-color: rgb(102, 196, 204);
 }
