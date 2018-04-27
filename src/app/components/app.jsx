@@ -3,45 +3,59 @@ import resetStyle from '../../../css/reset.css';
 import style from '../../../css/app.css';
 import Card from './card';
 import AddNote from './addNote';
+import Delete from './delete';
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      cards: [{
-        color: 'green',
-        title: 'Grocery List',
-        body: 'This is where you write your thoughts and anything else you want to share.',
-      }],
+      cards: [],
       showAddNote: false,
       editNote: false,
       cardToEdit: 0,
+      showDelete: false,
     }
     this.showAddNote = this.showAddNote.bind(this);
     this.closeAddNote = this.closeAddNote.bind(this);
     this.addNote = this.addNote.bind(this);
     this.saveNote = this.saveNote.bind(this);
     this.showEditNote = this.showEditNote.bind(this);
+    this.showDelete = this.showDelete.bind(this);
+    this.closeDelete = this.closeDelete.bind(this);
+    this.deleteNote = this.deleteNote.bind(this);
   }
 
   showAddNote() {
     this.setState({
       showAddNote: true,
-    })
+    });
   }
 
   showEditNote(index) {
     this.setState({
       editNote: true,
       cardToEdit: index,
-    })
+    });
+  }
+
+  showDelete(index) {
+    this.setState({
+      showDelete: true,
+      cardToEdit: index,
+    });
+  }
+
+  closeDelete() {
+    this.setState({
+      showDelete: false,
+    });
   }
 
   closeAddNote() {
     this.setState({
       showAddNote: false,
       editNote: false,
-    })
+    });
   }
 
   addNote({color, title, body}) {
@@ -49,7 +63,7 @@ class App extends React.Component {
       const cards = prevState.cards.slice();
       cards.push({color, title, body});
       return { cards };
-    })
+    });
   }
 
   saveNote({color, title, body}) {
@@ -57,7 +71,14 @@ class App extends React.Component {
       const cards = prevState.cards.slice();
       cards[this.state.cardToEdit] = {color, title, body};
       return { cards };
-    })
+    });
+  }
+
+  deleteNote() {
+    this.setState((prevState) => {
+      prevState.cards.splice(this.state.cardToEdit, 1);
+      return { cards: prevState.cards, showDelete: false };
+    });
   }
 
   render() {
@@ -72,7 +93,14 @@ class App extends React.Component {
           <ul className="flex-container">
             {
               this.state.cards.map((card, index) => (
-                <Card key={index} color={card.color} title={card.title} body={card.body} editNote={() => this.showEditNote(index)}/>
+                <Card 
+                  key={index} 
+                  color={card.color} 
+                  title={card.title} 
+                  body={card.body} 
+                  editNote={() => this.showEditNote(index)}
+                  showDelete={() => this.showDelete(index)}
+                />
               ))
             }
           </ul>
@@ -91,6 +119,9 @@ class App extends React.Component {
             color={this.state.cards[this.state.cardToEdit].color}
             saveNote={this.saveNote}
           /> : null
+        }
+        {
+          this.state.showDelete ? <Delete closeDelete={this.closeDelete} deleteNote={this.deleteNote}/> : null
         }
       </div>
     );

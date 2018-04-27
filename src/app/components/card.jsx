@@ -2,7 +2,7 @@ import React from 'react';
 import reset from '../../../css/reset.css';
 import style from '../../../css/card.css';
 
-const Card = ({color, title, body, editNote}) => (
+const Card = ({color, title, body, editNote, showDelete}) => (
   <li className="card">
     <div className={`color ${color}`}></div>
     <div className="cardContent">
@@ -20,7 +20,7 @@ const Card = ({color, title, body, editNote}) => (
               <svg className="icon" viewBox="0 0 459 459" style={{'enableBackground': 'new 0 0 459 459'}}>
                 <g>
                   <g>
-                    <path id="bin" d="M76.5,408c0,28.05,22.95,51,51,51h204c28.05,0,51-22.95,51-51V102h-306V408z M408,25.5h-89.25L293.25,0h-127.5l-25.5,25.5    H51v51h357V25.5z" fill="#dcddde"/>
+                    <path onClick={showDelete} id="bin" d="M76.5,408c0,28.05,22.95,51,51,51h204c28.05,0,51-22.95,51-51V102h-306V408z M408,25.5h-89.25L293.25,0h-127.5l-25.5,25.5    H51v51h357V25.5z" fill="#dcddde"/>
                   </g>
                 </g>
               </svg>
