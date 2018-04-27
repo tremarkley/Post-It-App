@@ -42,23 +42,34 @@ h1 {
 
 .iconsDiv {
   float: right;
-  width: 30%;
-  height: 100%;
-}
-
-.pencilDiv {
+  width: 20%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.pencil {
-  background: url(../src/public/assets/svg/pencil.svg);
+.icon {
   width: .3em;
   height: .3em;
-  float: right;
+}
+
+.pencil {
+  background: url(../src/public/assets/svg/pencil.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+}
+
+.bin {
+  background: url(../src/public/assets/svg/trash.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.iconsHolder {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
 }

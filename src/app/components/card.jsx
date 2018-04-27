@@ -11,10 +11,11 @@ const Card = () => (
           <h1>Grocery List</h1>
         </div>
         <div className="iconsDiv">
-          <div className="pencilDiv">
-            <a className="pencil"></a>
+          <div className="iconsHolder">
+            <a className="icon pencil"></a>
+            <a className="icon bin"></a>
           </div>
-          </div>
+        </div>
       </div>
       <div className="cardBody"></div>
     </div>
