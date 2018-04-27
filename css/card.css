@@ -73,18 +73,12 @@ h1 {
   height: .3em;
 }
 
-.pencil {
-  background: url(../src/public/assets/svg/pencil.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+.icon:hover {
+  cursor: pointer;
 }
 
-.bin {
-  background: url(../src/public/assets/svg/trash.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+#bin:hover, #pencil:hover {
+  fill: rgb(103, 196, 204) !important;
 }
 
 .iconsHolder {
