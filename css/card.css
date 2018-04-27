@@ -73,12 +73,9 @@ h1 {
   height: .3em;
 }
 
-.icon:hover {
-  cursor: pointer;
-}
-
 #bin:hover, #pencil:hover {
   fill: rgb(103, 196, 204) !important;
+  cursor: pointer;
 }
 
 .iconsHolder {
