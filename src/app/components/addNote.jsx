@@ -6,9 +6,9 @@ class AddNote extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      color: 'red',
-      body: undefined,
-      title: undefined,
+      color: props.color,
+      body: props.body,
+      title: props.title,
       addButtonActive: false,
       changesHaveBeenMade: false,
     }
@@ -20,7 +20,11 @@ class AddNote extends React.Component {
 
   clickAddNote() {
     if (this.state.addButtonActive) {
-      this.props.addNote(this.state);
+      if (this.props.isNewNote) {
+        this.props.addNote(this.state);
+      } else {
+        this.props.saveNote(this.state);
+      }
       this.props.closeAddNote();
     }
   }
@@ -80,7 +84,7 @@ class AddNote extends React.Component {
               <div className="flex-vertical">
                 <div className="buttonsDiv">
                   <button className="popupButton cancel" onClick={this.props.closeAddNote}>Cancel</button>
-                  <button className={`popupButton add ${this.state.addButtonActive ? 'active' : null}`} onClick={this.clickAddNote}>Add</button>
+                  <button className={`popupButton add ${this.state.addButtonActive ? 'active' : null}`} onClick={this.clickAddNote}>{this.props.isNewNote ? 'Add' : 'Save'}</button>
                 </div>
               </div>
             </div>
