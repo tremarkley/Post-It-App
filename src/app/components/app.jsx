@@ -116,7 +116,7 @@ class App extends React.Component {
           </ul>
         </div>
         {
-          this.state.showAddNote ? <AddNote closeAddNote={this.closeAddNote} addNote={this.addNote} isNewNote={true}/> : null
+          this.state.showAddNote ? <AddNote closeAddNote={this.closeAddNote} addNote={this.addNote} isNewNote={true} color='red' /> : null
         }
         {
           this.state.editNote ? 
