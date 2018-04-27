@@ -88,12 +88,12 @@ class AddNote extends React.Component {
               <div className="noteContent">
                 <textarea placeholder="Enter text here" value={this.state.body} onChange={this.bodyChange}></textarea>
               </div>
-              <div className="flex-vertical">
+            </div>
+            <div className="flex-vertical">
                 <div className="buttonsDiv">
                   <button className="popupButton cancel" onClick={this.props.closeAddNote}>Cancel</button>
                   <button className={`popupButton add ${this.state.addButtonActive ? 'active' : null}`} onClick={this.clickAddNote}>{this.props.isNewNote ? 'Add' : 'Save'}</button>
                 </div>
-              </div>
             </div>
           </div>
         </div>

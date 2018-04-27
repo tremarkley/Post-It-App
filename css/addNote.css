@@ -27,7 +27,7 @@
 }
 
 .popupContent {
-  height: 98%;
+  height: 85%;
   padding: 1em 2em;
 }
 
@@ -110,11 +110,12 @@ textarea:focus {
 }
 
 .flex-vertical {
-  height: 10%;
+  height: 13%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 1em;
+  padding: 1em 2em;
+  background-color: rgb(249, 249, 251);
 }
 
 .buttonsDiv {
