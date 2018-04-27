@@ -52,7 +52,10 @@ class AddNote extends React.Component {
 
   colorChange(event) {
     const color = event.target.id;
-    this.setState({ color });
+    if (color !== this.state.color) {
+      this.setState({ color });
+      this.activateAddButton();
+    }
   }
 
   bodyChange(event) {
