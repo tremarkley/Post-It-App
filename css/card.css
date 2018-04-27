@@ -28,6 +28,7 @@
 .cardHeaderText {
   height: 100%;
   padding: .4em;
+  float: left;
 }
 
 h1 {
@@ -37,4 +38,27 @@ h1 {
 
 .cardBody {
   height: 75%;
+}
+
+.iconsDiv {
+  float: right;
+  width: 30%;
+  height: 100%;
+}
+
+.pencilDiv {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pencil {
+  background: url(../src/public/assets/svg/pencil.svg);
+  width: .3em;
+  height: .3em;
+  float: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }

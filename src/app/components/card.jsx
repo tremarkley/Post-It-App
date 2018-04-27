@@ -10,6 +10,11 @@ const Card = () => (
         <div className="cardHeaderText">
           <h1>Grocery List</h1>
         </div>
+        <div className="iconsDiv">
+          <div className="pencilDiv">
+            <a className="pencil"></a>
+          </div>
+          </div>
       </div>
       <div className="cardBody"></div>
     </div>
