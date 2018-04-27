@@ -12,8 +12,8 @@
 
 .popupInner {
   position: absolute;
-  left: 25%;
-  right: 25%;
+  left: 30%;
+  right: 30%;
   top: 15%;
   bottom: 5%;
   margin: auto;
@@ -23,7 +23,6 @@
 }
 
 .colorPopup {
-  background: rgb(244, 169, 176);
   height: .65em;
 }
 
