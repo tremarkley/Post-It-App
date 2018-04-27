@@ -64,6 +64,10 @@ class AddNote extends React.Component {
     });
   }
 
+  calculateColorClass(color) {
+    return `colorItem ${color} ${this.state.color === color ? 'active' : null}`
+  }
+
   render() {
     return (
       <div className="popup">
@@ -72,10 +76,10 @@ class AddNote extends React.Component {
             <div className="popupContent">
               <div className="colorPickerDiv">
                 <ul className="colorPicker">  
-                  <li id="red" className="colorItem red" onClick={this.colorChange}></li>
-                  <li id="green" className="colorItem green" onClick={this.colorChange}></li>
-                  <li id="orange" className="colorItem orange" onClick={this.colorChange}></li>
-                  <li id="blue" className="colorItem blue" onClick={this.colorChange}></li>
+                  <li id="red" className={this.calculateColorClass('red')} onClick={this.colorChange}></li>
+                  <li id="green" className={this.calculateColorClass('green')} onClick={this.colorChange}></li>
+                  <li id="orange" className={this.calculateColorClass('orange')} onClick={this.colorChange}></li>
+                  <li id="blue" className={this.calculateColorClass('blue')} onClick={this.colorChange}></li>
                 </ul>
               </div>
               <div className="titleDiv">

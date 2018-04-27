@@ -46,7 +46,10 @@
 
 .colorItem:hover {
   cursor: pointer;
-  border: 1px solid grey;
+}
+
+.colorItem.active {
+  border: .1em solid grey;
 }
 
 .red {
