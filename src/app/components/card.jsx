@@ -2,13 +2,13 @@ import React from 'react';
 import reset from '../../../css/reset.css';
 import style from '../../../css/card.css';
 
-const Card = () => (
+const Card = ({color, title, body}) => (
   <li className="card">
-    <div className="color"></div>
+    <div className={`color ${color}`}></div>
     <div className="cardContent">
       <div className="cardHeader">
         <div className="cardHeaderText">
-          <h1>Grocery List</h1>
+          <h1>{title}</h1>
         </div>
         <div className="iconsDiv">
           <div className="iconsHolder">
@@ -18,7 +18,7 @@ const Card = () => (
         </div>
       </div>
       <div className="cardBody">
-        <p>This is where you write your thoughts and anything else you want to share.</p>
+        <p>{body}</p>
       </div>
     </div>
   </li>

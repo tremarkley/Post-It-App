@@ -12,8 +12,23 @@
 }
 
 .color {
-  background: rgb(244, 169, 176);
   height: .15em;
+}
+
+.red {
+  background: rgb(244, 169, 176);
+}
+
+.green {
+  background: rgb(181, 236, 209);
+}
+
+.orange {
+  background: rgb(251, 219, 174);
+}
+
+.blue {
+  background: rgb(174, 204, 250);
 }
 
 .cardContent {

@@ -45,6 +45,11 @@
   border-radius: .1em;
 }
 
+.colorItem:hover {
+  cursor: pointer;
+  border: 1px solid grey;
+}
+
 .red {
   background: rgb(244, 169, 176);
 }
@@ -69,6 +74,7 @@
   width: -webkit-fill-available;
   border: none;
   font-size: 2em;
+  color: rgb(98, 127, 147);
 }
 
 .titleInput:focus {
@@ -94,6 +100,7 @@ textarea {
   resize: none;
   font-size: 1em;
   overflow: auto;
+  color: rgb(98, 127, 147);
 }
 
 textarea:focus {
