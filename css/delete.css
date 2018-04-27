@@ -24,12 +24,12 @@
 
 .warningText {
   height: 66%;
-  padding: 2em;
+  padding: 0 2em;
 }
 
 .deleteHeader {
   font-size: 1.5em;
-  padding: .5em 0;
+  padding: 1.3em 0;
   color: rgb(102, 125, 138);
 }
 
