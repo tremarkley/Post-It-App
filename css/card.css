@@ -3,7 +3,7 @@
   width: 6.5em;
   height: 5em;
   margin: .2em;
-  color: black;
+  color: rgb(98, 127, 147);
   font-weight: bold;
   font-size: 3em;
   box-shadow: 0 0.05em 0.1em grey;
@@ -12,7 +12,7 @@
 }
 
 .color {
-  background: red;
+  background: rgb(244, 169, 176);
   height: .15em;
 }
 
