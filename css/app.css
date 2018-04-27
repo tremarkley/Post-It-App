@@ -1,3 +1,11 @@
+button:hover {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
 .navBar {
   list-style-type: none;
   margin: 0;

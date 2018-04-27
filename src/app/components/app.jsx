@@ -2,13 +2,29 @@ import React from 'react';
 import resetStyle from '../../../css/reset.css';
 import style from '../../../css/app.css';
 import Card from './card';
+import AddNote from './addNote';
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
       cards: [],
+      showAddNote: false,
     }
+    this.showAddNote = this.showAddNote.bind(this);
+    this.closeAddNote = this.closeAddNote.bind(this);
+  }
+
+  showAddNote() {
+    this.setState({
+      showAddNote: true,
+    })
+  }
+
+  closeAddNote() {
+    this.setState({
+      showAddNote: false,
+    })
   }
 
   render() {
@@ -16,20 +32,17 @@ class App extends React.Component {
       <div>
         <ul className="navBar">
           <li className="navItem">
-            <button className="addNoteBtn"><div className="plusIcon"><span>+</span></div>Add Note</button>
+            <button className="addNoteBtn" onClick={this.showAddNote}><div className="plusIcon"><span>+</span></div>Add Note</button>
           </li>
         </ul>
         <div className="content">
           <ul className="flex-container">
-            {/* <li className="flex-item">1</li>
-            <li className="flex-item">2</li>
-            <li className="flex-item">3</li>
-            <li className="flex-item">4</li>
-            <li className="flex-item">5</li>
-            <li className="flex-item">6</li> */}
             <Card />
           </ul>
         </div>
+        {
+          this.state.showAddNote ? <AddNote closeAddNote={this.closeAddNote}/> : null
+        }
       </div>
     );
   }
